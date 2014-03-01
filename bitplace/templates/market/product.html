@@ -71,7 +71,7 @@
                   </div>
               </div>
               <div class="panel-body">
-                <form class="form form-vertical">
+                <form class="form form-vertical" action="{% url 'market:pay' product.id %}">
                   <div class="control-group">
                     <label>Email</label>
                     <div class="controls">
