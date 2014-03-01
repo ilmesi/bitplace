@@ -61,7 +61,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <h1 id="dropdowns" class="page-header">Product name</h1>
+            <h1 id="dropdowns" class="page-header">{{ product }}</h1>
 
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -71,7 +71,7 @@
                   </div>
               </div>
               <div class="panel-body">
-                <form class="form form-vertical" action="{% url 'market:pay' product.id %}">
+                <form class="form form-vertical" action="{% url 'market:pay' %}">
                   <div class="control-group">
                     <label>Email</label>
                     <div class="controls">
@@ -81,10 +81,16 @@
                   <div class="control-group">
                       <label></label>
                       <div class="controls">
-                      <button type="submit" class="btn btn-success">
-                        Comprar!
-                      </button>
+                          <button type="submit" class="btn btn-success">
+                            Comprar!
+                          </button>
                       </div>
+                  </div>
+                  <div class="control-group">
+                    <label>Pay Address</label>
+                    <div class="controls">
+                     <input type="text" class="form-control" placeholder="Pay Address" disabled id="address" name="address">
+                    </div>
                   </div>
                 </form>
             </div>
