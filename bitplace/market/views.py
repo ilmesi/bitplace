@@ -9,7 +9,6 @@ def index(request):
     pass
 
 def product(request, id):
-    print id
     product = get_object_or_404(Product, id)
     return render_to_response('market/product.html', {'product':id}, RequestContext(request))
 
