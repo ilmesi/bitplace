@@ -10,12 +10,15 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import sys
 from os.path import abspath, dirname, join
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 ROOT_DIR = abspath(join(dirname(__file__), os.path.pardir))
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+sys.path.insert(1, os.path.join(PROJECT_ROOT, '..', "bitplace"))
+sys.path.insert(2, os.path.join(PROJECT_ROOT, '..', "lib"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
