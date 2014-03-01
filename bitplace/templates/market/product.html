@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<style type="text/css">
+    .bs-docs-header {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        font-size: 24px;
+        text-align: left;
+    }
+    .bs-docs-header {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    .bs-docs-masthead, .bs-docs-header {
+        position: relative;
+        padding: 30px 15px;
+        color: #cdbfe3;
+        text-align: center;
+        text-shadow: 0 1px 0 rgba(0,0,0,.1);
+        background-color: #6f5499;
+        background-image: -webkit-linear-gradient(top,#563d7c 0,#6f5499 100%);
+        background-image: linear-gradient(to bottom,#563d7c 0,#6f5499 100%);
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
+    }
+    .bs-docs-header .container {
+        position: relative;
+    }
+    @media (min-width: 992px)
+        .bs-docs-header h1, .bs-docs-header p {
+        margin-right: 380px;
+    }
+    @media (min-width: 768px)
+        .bs-docs-header h1 {
+        font-size: 60px;
+        line-height: 1;
+    }
+    .bs-docs-header h1 {
+        margin-top: 0;
+        color: #fff;
+    }
+    .bs-docs-header h1, .bs-docs-header p {
+        margin-right: 380px;
+    }
+    .bs-docs-header p {
+        margin-bottom: 0;
+        font-weight: 300;
+        line-height: 1.4;
+    }
+</style>
+
+<div class="bs-docs-header" id="content">
+  <div class="container">
+    <h1>Components</h1>
+    <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id.</p>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1 id="dropdowns" class="page-header">Product name</h1>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  <div class="panel-title">
+                  <i class="glyphicon glyphicon-usd pull-right"></i>
+                  <h4>Realizar compra</h4>
+                  </div>
+              </div>
+              <div class="panel-body">
+                <form class="form form-vertical">
+                  <div class="control-group">
+                    <label>Email</label>
+                    <div class="controls">
+                     <input type="text" class="form-control" placeholder="Enter email" id="email" name="email">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                      <label></label>
+                      <div class="controls">
+                      <button type="submit" class="btn btn-success">
+                        Comprar!
+                      </button>
+                      </div>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

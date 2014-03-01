@@ -1,0 +1,25 @@
+{% load staticfiles %}
+
+<div id="wrapper">
+    <ul id="flip" class="ui-jcoverflip">
+      <li title="The first image" class="ui-jcoverflip--item" style="left: 15px; bottom: 20px;">
+        <img src="http://localhost:8000/static/img/1.png" style="width: 80px;"></li>
+      <li title="A second image" class="ui-jcoverflip--item" style="left: 105px; bottom: 20px;">
+        <img src="http://localhost:8000/static/img/2.png" style="width: 100px;"></li>
+      <li title="This is the description" class="ui-jcoverflip--item" style="left: 215px; bottom: 0px;">
+        <img src="http://localhost:8000/static/img/3.png" style="width: 200px;"></li>
+      <li title="Another description" class="ui-jcoverflip--item" style="left: 425px; bottom: 20px;">
+        <img src="http://localhost:8000/static/img/4.png" style="width: 100px;"></li>
+      <li title="A title for the image" class="ui-jcoverflip--item" style="left: 535px; bottom: 20px;">
+        <img src="http://localhost:8000/static/img/5.png" style="width: 80px;"></li>
+
+        <span class="title ui-jcoverflip--title" style="display: none;">A title for the image</span>
+        <span class="title ui-jcoverflip--title" style="display: none;">Another description</span>
+        <span class="title ui-jcoverflip--title" style="">This is the description</span>
+        <span class="title ui-jcoverflip--title" style="display: none;">A second image</span>
+        <span class="title ui-jcoverflip--title" style="display: none;">The first image</span>
+    </ul>
+    <div id="scrollbar" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+        <a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 50%;"></a>
+    </div>
+</div>
