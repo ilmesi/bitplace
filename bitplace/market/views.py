@@ -21,8 +21,9 @@ def callback(request):
 
 def pay(request):
     product_id = request.GET.get("product_id")
-    product = Product.objects.get(product_id=product_id)
-    p = PaymentWrapper(product.price, product.Account.address)
+    product = Product.objects.get(id=product_id)
+    p = PaymentWrapper(product.price, product.account.address)
     input_address = p.generate()
-    payment = Payment.object.create(product=product, input_address=input_address)
+    payment = Payment.objects.create(product=product, input_address=input_address)
     payment.save()
+    return HttpResponse("ok")

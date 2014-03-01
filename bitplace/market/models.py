@@ -8,7 +8,10 @@ class Account(User):
 
 class Product(models.Model):
     account = models.ForeignKey(Account, blank=False, null=False)
+    price = models.DecimalField(max_digits=6, decimal_places=4, blank=False, null=False)
 
+    def __unicode__(self):
+        return "Product #" + str(self.id)
 
 class Payment(models.Model):
     PAYMENT_CHOICES = (
