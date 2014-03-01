@@ -9,7 +9,7 @@ def index(request):
     pass
 
 def product(request, id):
-    product = get_object_or_404(Product, id)
+    product = get_object_or_404(Product, id=id)
     return render_to_response('market/product.html', {'product':id}, RequestContext(request))
 
 def callback(request):

@@ -7,6 +7,6 @@ urlpatterns = patterns('',
     # Examples:
     #url(r'^$', 'bitplace.views.home', name='home'),
     url(r'^$', include('home.urls')),
-    url(r'^market/', include('market.urls') ), 
+    url(r'^market/', include('market.urls', namespace='market') ),
     url(r'^admin/', include(admin.site.urls)),
 )
