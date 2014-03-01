@@ -10,8 +10,12 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from os.path import abspath, dirname, join
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+
+ROOT_DIR = abspath(join(dirname(__file__), os.path.pardir))
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -38,6 +42,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'south',
+    'home',
+    'market',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -81,6 +87,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = '/static/'
+#STATIC_ROOT = os.path.join(ROOT_DIR, 'static')
+
+STATIC_URL = "/static/"
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
