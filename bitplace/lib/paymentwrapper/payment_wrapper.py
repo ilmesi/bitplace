@@ -1,7 +1,7 @@
 import requests
 
 
-class Payment():
+class PaymentWrapper():
     base_api_url = "https://blockchain.info/es/api"
     callback_base_url = "http://bitplace.herokuapp.com/callback" #ABSOLUTE URL!!! TODO
 
